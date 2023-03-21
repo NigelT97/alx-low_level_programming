@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * main - entrance
- * print_alphabet -  from a to z
- * Return: zero
+ * print_alphabet - from a to z function
  */
 void print_alphabet(void)
 {
