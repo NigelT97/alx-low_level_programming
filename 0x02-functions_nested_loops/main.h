@@ -3,6 +3,10 @@
 
 #include<stdio.h>
 #include<ctype.h>
+#include <stdlib.h>
+#include <math.h>
+
+
 
 void print_alphabet(void);
 void print_alphabet_x10(void);
