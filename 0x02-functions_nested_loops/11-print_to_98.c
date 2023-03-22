@@ -5,10 +5,18 @@
  */
 void print_to_98(int n)
 {
-	do {
-		_putchar(n);
-		_putchar(',');
-		_putchar(' ');
-		++n;
-	} while (n <= 98);
+	if (n > 98)
+	{
+		do {
+			printf("%d, ", n);
+			n = n - 1;
+		} while (n >= 98);
+	}
+	else
+	{
+		do {
+			printf("%d, ", n);
+			n = n + 1;
+		} while (n >= 98);
+	}
 }
