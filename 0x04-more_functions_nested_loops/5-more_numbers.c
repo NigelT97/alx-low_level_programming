@@ -6,7 +6,7 @@ void more_numbers(void)
 {
 	int n, a, m;
 
-	for (n = 0; n < 11; ++n)
+	for (n = 0; n <= 10; ++n)
 	{
 		a = 0;
 
@@ -18,8 +18,8 @@ void more_numbers(void)
 			m = a % 10;
 			}
 			_putchar(m + 48);
-			++a;
-		} while (a < 15);
+			a = a + 1;
+		} while (a <= 14);
 
 		_putchar('\n');
 	}
