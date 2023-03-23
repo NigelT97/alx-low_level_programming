@@ -4,14 +4,20 @@
  */
 void more_numbers(void)
 {
-	int n, a;
+	int n, a, m;
 
 	for (n = 0; n < 11; ++n)
 	{
 		a = 0;
 
 		do {
-			_putchar(a + 48);
+			m = a;
+			if ( a > 9)
+			{
+			_putchar(1 + 48);
+			m = a % 10;
+			}
+			_putchar(m + 48);
 			++a;
 		} while (a < 15);
 
