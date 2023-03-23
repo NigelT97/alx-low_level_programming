@@ -12,7 +12,7 @@ void more_numbers(void)
 
 		do {
 			m = a;
-			if ( a > 9)
+			if (a > 9)
 			{
 			_putchar(1 + 48);
 			m = a % 10;
@@ -23,5 +23,4 @@ void more_numbers(void)
 
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
