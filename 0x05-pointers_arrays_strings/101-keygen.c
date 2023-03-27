@@ -15,9 +15,9 @@ int main(void)
 	time_t t;
 
 	srand((int) time(&t));
-	while (x > 62)
+	while (x > 102)
 	{
-		r = rand() % 49 ;
+		r = rand() % 59 ;
 		pd[i] = r;
 		x -= r;
 		i++;
