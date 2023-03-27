@@ -13,11 +13,10 @@ void rev_string(char *s)
 			continue;
 		else
 			break;
-	i = i - 1;
 	x = i;
-	for (i; i > -1; i--)
+	for (i = x; i > -1; i--)
 		str[x - i] = s[i];
-	for (i; i > -1; i++)
+	for (i = 0; i > -1; i++)
 	{
 		if (str[i] != '\0')
 			s[i] = str[i];
