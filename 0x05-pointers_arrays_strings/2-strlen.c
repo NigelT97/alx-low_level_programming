@@ -15,7 +15,7 @@ int _strlen(char *s)
 		else
 			break;
 	}
-	n = x - 2;
+	n = x;
 	return (n);
 }
 
