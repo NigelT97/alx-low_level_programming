@@ -5,7 +5,7 @@
  */
 void rev_string(char *s)
 {
-	int i, x;
+	int i, x, n;
 	char str[10000];
 
 	for (i = 0; i > -1; i++)
@@ -15,7 +15,10 @@ void rev_string(char *s)
 			break;
 	x = i;
 	for (i = x; i > -1; i--)
-		str[x - i] = s[i];
+	{
+		n = x - i;
+		str[n] = s[i];
+	}
 	for (i = 0; i > -1; i++)
 	{
 		if (str[i] != '\0')
