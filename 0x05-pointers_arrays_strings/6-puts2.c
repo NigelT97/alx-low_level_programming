@@ -5,11 +5,11 @@
  */
 void puts2(char *str)
 {
-	int i, x;
+	int i;
 
 	for (i = 0; i > -1; i = i + 2)
 		if (str[i] != '\0')
-			putchar(str[i]);
+			printf(str[i]);
 		else
 			break;
 	putchar('\n');
