@@ -11,13 +11,13 @@
 int main(void)
 {
 	int x = 2772, i = 0, j, r;
-	char pd[100];
+	char pd[1000];
 	time_t t;
 
 	srand((int) time(&t));
-	while (x > 78)
+	while (x > 62)
 	{
-		r = rand() % 28;
+		r = rand() % 49 ;
 		pd[i] = r;
 		x -= r;
 		i++;
