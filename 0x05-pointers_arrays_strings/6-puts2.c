@@ -1,16 +1,21 @@
 #include "main.h"
+
 /**
- * puts2 - exchange print
- * @str: pointer
+ * puts2 - prints every other character of a string.
+ *@str: pointer
  */
+
 void puts2(char *str)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i > -1; i = i + 2)
-		if (str[i] != '\0')
+	while (str[i] != '\0')
+	{
+		if (i % 2 == 0)
+		{
 			_putchar(str[i]);
-		else
-			i = -9;
-	putchar('\n');
+		}
+		i++;
+	}
+	_putchar('\n');
 }
