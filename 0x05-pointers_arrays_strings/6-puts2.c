@@ -9,7 +9,7 @@ void puts2(char *str)
 
 	for (i = 0; i > -1; i = i + 2)
 		if (str[i] != '\0')
-			printf(str[i]);
+			_putchar(str[i]);
 		else
 			break;
 	putchar('\n');
