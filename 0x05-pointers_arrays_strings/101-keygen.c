@@ -1,38 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 /**
  * main - entrance into programme
- * Descriptio - generate pd
- * Return: zero
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int x = 2772, i = 0, j, r;
-	char pd[1000];
-	time_t t;
+	int pd[100];
+	int i, x, n;
 
-	srand((int) time(&t));
-	while (x > 102)
-	{
-		r = rand() % 59 ;
-		pd[i] = r;
-		x -= r;
-		i++;
-	}
-	if (x > 0)
-		pd[i] = x;
-	else
-	{
-		i--;
-	}
-	
+	x = 0;	
 
-	for (j = 0; j <= i; j++)
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		printf("%c", pd[j]);
+		pd[i] = rand() % 78;
+		x += (pd[i] + '0');
+		putchar(pd[i] + '0');
+		if ((2772 - x) - '0' < 78)
+		{
+			n = 2772 - x - '0';
+			x += n;
+			putchar(n + '0');
+			break;
+		}
 	}
+
 	return (0);
 }
