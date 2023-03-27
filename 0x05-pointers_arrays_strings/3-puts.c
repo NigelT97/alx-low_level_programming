@@ -7,7 +7,7 @@ void _puts(char *str)
 {
 	int i;
 
-	for (i = 0; i < 100; ++i)
+	for (i = 0; i < 100000; ++i)
 	{
 		if (str[i] != '\0')
 			putchar(str[i]);
