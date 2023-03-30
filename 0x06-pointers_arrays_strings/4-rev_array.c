@@ -7,17 +7,12 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
-	char x[10000];
+	int i; b;
 
-	for (i = 0; i <= n; ++i)
+	for (i = 0; i < n; ++i)
 	{
-		if (i < n)
-		{
-			x[i] = a[n - i];
-			printf("%d, ", x[i]);
-		}
-		else
-			printf("%d", x[i]);
+		b = a[i];
+		a[i] = a[n];
+		a[n] = b;
 	}
 }
