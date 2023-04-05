@@ -9,7 +9,7 @@ int finder_sqrt(int n, int max)
 {
 	int x, flag;
 
-	for (max; max > 0; max--)
+	while (max > 0)
 	{
 		x = n % max;
 		if (x == 0 && n == max * max)
@@ -17,6 +17,7 @@ int finder_sqrt(int n, int max)
 			flag = 1;
 			break;
 		}
+		max--;
 	}
 	if (flag == 1)
 		return (max);
