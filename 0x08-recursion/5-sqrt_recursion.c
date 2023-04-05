@@ -1,49 +1,43 @@
 #include "main.h"
 /**
- * finder_sqrt - actual square root calculator
- * @n: number to be found
- * @max: half of whats needed
+ * root_sq - to actually find root
+ * @max: maximum range
  * Return: root
  */
-int finder_sqrt(int n, int max)
+int root_sq(int n, int max)
 {
-	int x;
-
-	x = n % max;
-	if (x == 0 && n == max * max)
+	if (n == max * max)
 		return (max);
+	else if (max > 1000)
+	{
+		max /= 2;
+		return (root_sq(n, max));
+	}
 	else if (max > 0)
-		finder_sqrt(n, max - 1);
-
-	return (-1);
+		return (root_sq(n, max - 1));
+	else
+		return (-1);
 }
 /**
- * _odd_even - check if number is even
- * @max: number to be checked
- * Return: max
- */
-int _odd_even(int max)
-{
-	if (max % 2 == 1)
-		max += 1;
-	return (max);
-}
-/**
- * _sqrt_recursion - finds square root of number
+ * _sqrt_recursion - find root of number
  * @n: number
- * Return: square root value
+ * Return: root
  */
 int _sqrt_recursion(int n)
 {
 	int max;
 
-	if (n > 0)
+	if (n % 2 == 1)
 	{
-		max = _odd_even(n);
-		max /= 2;
-		return (finder_sqrt(n, max));
+		max = (n + 1) / 2;
+		return (root_sq(n, max));
 	}
-	else if (n < 0)
+	else if (n >= 0)
+	{
+		max = n / 2;
+		return (root_sq(n, max));
+	}
+	else
 		return (-1);
-	return (0);
 }
+
