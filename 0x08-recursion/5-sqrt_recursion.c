@@ -35,7 +35,7 @@ int _odd_even(int max)
  */
 int _sqrt_recursion(int n)
 {
-	int max, min;
+	int max;
 
 	if (n > 0)
 	{
