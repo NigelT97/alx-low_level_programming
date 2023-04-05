@@ -2,6 +2,7 @@
 /**
  * root_sq - to actually find root
  * @max: maximum range
+ * @n: value with possible root
  * Return: root
  */
 int root_sq(int n, int max)
