@@ -17,9 +17,8 @@ int finder_sqrt(int n, int max)
 	}
 	return (-1);
 }
-			
 /**
- * _odd_even - check if number is even 
+ * _odd_even - check if number is even
  * @max: number to be checked
  * Return: max
  */
@@ -29,7 +28,6 @@ int _odd_even(int max)
 		max += 1;
 	return (max);
 }
-
 /**
  * _sqrt_recursion - finds square root of number
  * @n: number
@@ -38,6 +36,7 @@ int _odd_even(int max)
 int _sqrt_recursion(int n)
 {
 	int max, min;
+
 	if (n > 0)
 	{
 		max = _odd_even(n);
