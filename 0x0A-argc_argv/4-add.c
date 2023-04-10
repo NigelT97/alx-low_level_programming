@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) != 0)
+		if (atoi(argv[i]) > 0)
 		{
 			x += atoi(argv[i]);
 			flag = 0;
