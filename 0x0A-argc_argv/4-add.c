@@ -9,17 +9,24 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, x = 0, flag;
+	int i, j, x = 0, flag;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) > 0 || *argv[i] == '0')
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (isdigit(argv[i][j]))
+				continue;
+			else
+				flag = 1;
+		}
+		if (flag != 1)
 		{
 			x += atoi(argv[i]);
 			flag = 0;
 		}
 		else
-			flag = 1;
+			break;
 	}
 	if (flag == 1)
 	{
