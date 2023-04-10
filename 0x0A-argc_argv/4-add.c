@@ -18,11 +18,6 @@ int main(int argc, char *argv[])
 			x += atoi(argv[i]);
 			flag = 0;
 		}
-		else if (argv[i] == "0")
-		{
-			x += atoi(argv[i]);
-			flag = 0;
-		}
 		else
 			flag = 1;
 	}
