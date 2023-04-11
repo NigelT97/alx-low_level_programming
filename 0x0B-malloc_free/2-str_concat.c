@@ -23,6 +23,10 @@ char *str_concat(char *s1, char *s2)
 	int i, j, n, m;
 	char *str;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	i = string_count(s1);
 	j = string_count(s2);
 	str = malloc(sizeof(char) * (i + j + 1));
