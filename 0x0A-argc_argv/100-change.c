@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i, j, x, y = 0;
-	int change = {25, 10, 5, 2, 1}
+	int change[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	x = atoi(argv[1]);
-	for (i = 0, i < 5, i++)
+	for (i = 0; i < 5; i++)
 	{
 		for (j = 0; x >= change[i]; j++)
 		{
@@ -27,4 +27,4 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", y);
 	return (0);
-}			
+}
