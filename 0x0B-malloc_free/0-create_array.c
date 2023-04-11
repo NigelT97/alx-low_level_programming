@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - creates an array of chars
+ * create_array - creates an array of chars
  * @size: request of bytes required
  * @c: character
  * Return: result
@@ -12,7 +12,9 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	p = malloc(2 * size);
+	p = malloc(sizeof(char) * size);
+	if (p == NULL)
+		return (NULL);
 	for (x = 0; x < size; x++)
 		p[x] = c;
 	return (p);
