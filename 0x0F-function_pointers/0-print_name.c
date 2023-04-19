@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 /**
- * print-name - prints out given name
+ * print_name - prints out given name
  * @name: given name
  * @f:fuction pointer
  */
