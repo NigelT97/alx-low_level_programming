@@ -13,20 +13,20 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(11);
+		exit(98);
 	}
 	x = atoi(argv[1]);
 	ops = argv[2];
 	y = atoi(argv[3]);
-	if (get_op_func(ops)(x, y) == NULL)
+	if (get_op_func(ops) == NULL)
 	{
 		printf("Error\n");
-		exit(12);
+		exit(99);
 	}
 	if (y == 0 && (*ops == 47 || *ops == 37))
 	{
 		printf("Error\n");
-		exit(13);
+		exit(100);
 	}
 	printf("%d\n", get_op_func(ops)(x, y));
 	return (0);
