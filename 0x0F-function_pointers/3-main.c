@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int x, y;
-	char *op;
+	char *ops;
 
 	if (argc != 4)
 	{
@@ -16,18 +16,18 @@ int main(int argc, char *argv[])
 		exit(11);
 	}
 	x = atoi(argv[1]);
-	op = argv[2];
+	ops = argv[2];
 	y = atoi(argv[3]);
-	if (get_op_func(op) == NULL)
+	if (get_op_func(ops) == NULL)
 	{
 		printf("Error\n");
 		exit(12);
 	}
-	if (y == 0 && *op == 47 || *op == 37)
+	if (y == 0 && *ops == 47 || *ops == 37)
 	{
 		printf("Error\n");
 		exit(13);
 	}
-	printf("%d\n", get_op_func(op)(x, y));
+	printf("%d\n", get_op_func(ops)(x, y));
 	return (0);
 }
