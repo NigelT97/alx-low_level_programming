@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 	ops = argv[2];
 	y = atoi(argv[3]);
-	if (get_op_func(ops) == NULL)
+	if (get_op_func(ops)(x, y) == NULL)
 	{
 		printf("Error\n");
 		exit(12);
 	}
-	if (y == 0 && *ops == 47 || *ops == 37)
+	if (y == 0 && (*ops == 47 || *ops == 37))
 	{
 		printf("Error\n");
 		exit(13);
