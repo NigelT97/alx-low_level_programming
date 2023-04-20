@@ -6,7 +6,7 @@
 void print_all(const char * const format, ...)
 {
 	int n;
-	char *se, *sp, *str;
+	char *se, *sp;
 	va_list ls;
 
 	va_start(ls, format);
@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 					printf("%s%f", sp, va_arg(ls, double));
 					break;
 				case 's':
-					str = va_arg(ls, char *);
+					se = va_arg(ls, char *);
 					if (!str)
 						str = "(nil)";
 					printf("%s%s", sp, str);
