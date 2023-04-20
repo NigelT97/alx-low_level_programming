@@ -38,6 +38,7 @@ void print_all(const char * const format, ...)
 					continue;
 			}
 			sp = ", ";
+			n++;
 		}
 	}
 	printf("\n");
