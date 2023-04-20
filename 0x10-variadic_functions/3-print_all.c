@@ -33,9 +33,10 @@ void print_all(const char * const format, ...)
 						str = "(nil)";
 					printf("%s%s", sp, str);
 					break;
+				default:
+					n++;
 			}
 			sp = ", ";
-			n++;
 		}
 	}
 	printf("\n");
