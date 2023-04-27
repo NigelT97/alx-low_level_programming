@@ -5,11 +5,17 @@
 #include <string.h>
 #include <stdio.h>
 
-typedef struct ls
+/**
+ * struct list_s - link list
+ * @str: string
+ * @len: length
+ * @next: points to next node
+ */
+typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct ls *next;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
