@@ -8,8 +8,6 @@ size_t print_list(const list_t *h)
 {
 	size_t nodec;
 
-	if (h == NULL)
-		nodec = 0;
 	for (nodec = 1; h->next != NULL; nodec++)
 	{
 		if (h->str == NULL)
@@ -18,5 +16,7 @@ size_t print_list(const list_t *h)
 			printf("[%d] %s\n", h->ln, h->str);
 		h = h->next;
 	}
+	if (h == NULL)
+		nodec = 0;
 	return (nodec);
 }
