@@ -8,7 +8,7 @@
 typedef struct ls
 {
 	char *str;
-	unsigned int ln;
+	unsigned int len;
 	struct ls *next;
 } list_t;
 
