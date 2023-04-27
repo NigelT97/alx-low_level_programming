@@ -3,7 +3,14 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <stdlib.h>
+#include <stdio.h>
+
+typedef struct ls
+{
+	char *str;
+	unsigned int ln;
+	struct ls *next;
+} list_t;
 
 size_t print_list(const list_t *h);
 
