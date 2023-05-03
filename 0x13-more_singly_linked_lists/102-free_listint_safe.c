@@ -7,16 +7,16 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t ln = 0;
-	int d;
+	int df;
 	listint_t *c;
 
-	if (!h || !*h)
+	if (!h || !(*h))
 		return (0);
 
 	while (*h)
 	{
-		d = *h - (*h)->next;
-		if (d > 0)
+		df = *h - (*h)->next;
+		if (df > 0)
 		{
 			c = (*h)->next;
 			free(*h);
