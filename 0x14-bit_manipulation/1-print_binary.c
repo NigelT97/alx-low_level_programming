@@ -18,8 +18,14 @@ void print_binary(unsigned long int n)
 	while (i >= 0)
 	{
 		if ((n >> i) & 1)
+		{
 			printf("1");
+			i--;
+		}
 		else
+		{
 			printf("0");
+			i--;
+		}
 	}
 }
