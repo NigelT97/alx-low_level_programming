@@ -25,10 +25,11 @@ void terminate_file(int fli)
 	int x;
 
 	x = close(fli);
-	if (x == -1)
+
+	if (-1 == x)
 	{
-		 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fli);
-		 exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fli);
+		exit(100);
 	}
 }
 /**
