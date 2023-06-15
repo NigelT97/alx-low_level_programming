@@ -4,7 +4,7 @@
  * @h: list head
  * Return: node number
  */
-size_t dlistint_len(const dlistont_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int i = 0;
 
